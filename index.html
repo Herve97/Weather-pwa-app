@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme_color">
+    <meta name="description" content="This application help user(s) to get current weather information">
+    <title>WEATHER APP</title>
+    <link rel="shortcut icon" href="/img/favicon16-16.png" type=" image/x-icon ">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet " href="./style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <!-- container -->
+    <section class="app-container" aria-label="Section App Container">
+        <section id="app-header" class="app-header" aria-label="Section App Header">
+            <div class="wrapper" aria-label="Wrapper">
+                <header class="app-header__buttons">
+                    <p id="map" class="map">
+                        <img src="./img/icon512-512.png" alt="Weather App logo" class="map-img">
+                    </p>
+                    <p id="text" aria-label="Weather App">Weather&nbsp;App</p>
+                    <div class="app-header__search">
+                        <input type="text" id="search-value" aria-label="search city input">
+                    </div>
+                    <i class="fa fa-search" alt="Search submit button" id="search-btn" aria-label="Search submit button" aria-hidden="false"></i>
+                </header>
+                <div class="app-header__screen">
+                    <h1 id="city-name">Searching city</h1>
+                    <img src="./img/loader.gif" alt="Loading results" id="loader" width="80">
+                    <p class="temperature" aria-label="Temperature">
+                        <span id="temp"></span>
+                    </p>
+                    <p id="conditions" aria-label="Conditions"></p>
+                </div>
+
+            </div>
+            <!-- end wrapper -->
+        </section>
+        <!-- end app-header -->
+
+        <!-- app-body -->
+        <section class="app-body" aria-label="App body">
+            <div class="app-body__icons-wrapper">
+                <div class="app-body__icons">
+                    <div class="app-body__icon">
+                        <i class="fas fa-wind fa-2x"></i>
+                        <p aria-label="Wind speed">
+                            Wind speed&nbsp; <br> <span id="wind">0</span>m/s
+                        </p>
+                    </div>
+                    <div class="app-body__icon">
+                        <i class="fas fa-tint fa-2x"></i>
+                        <p aria-label="Humidity">
+                            Humidity&nbsp; <br> <span id="humidity">0</span>%
+                        </p>
+                    </div>
+                    <div class="app-body__icon">
+                        <i class="far fa-clock fa-2x"></i>
+                        <p aria-label="Pressure">
+                            Pressure&nbsp; <br> <span id="pressure">0</span>mb</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end app-body -->
+
+    </section>
+    <!-- container -->
+    <script src="./app.js"></script>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+</html>
